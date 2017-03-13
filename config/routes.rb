@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  root 		'home#index'
-  get 		'home/index'
-  get 		'home/help'
-  get 		'home/about'
+  get 'users/new'
+
+  root 'home#index'
+  get  '/help',    to: 'home#help'
+  get  '/about',   to: 'home#about'
+  get  '/contact', to: 'home#contact'
+  get  '/signup',  to: 'users#new'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
